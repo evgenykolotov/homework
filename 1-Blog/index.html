@@ -1,115 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Мой блог HOMEWORK</title>
-        <style>
-            .visually-hidden {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                padding: 0;
-                margin: -1px;
-                overflow: hidden;
-                clip: rect(0, 0, 0, 0);
-                white-space: nowrap;
-                border: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="page">
-            <header class="top-panel">
-                <a class="logo-block" href="#" aria-label="Перейти на главную страницу блога">
-                    <span aria-hidden="true">B</span>
-                    <span>Мой блог</span>
-                </a>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мой блог</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <a class="logo" href="#" aria-label="Перейти на главную страницу блога">
+                <span class="logo__mark" aria-hidden="true">B</span>
+                <span class="logo__text">Мой блог</span>
+            </a>
 
-                <nav aria-label="Основная навигация">
-                    <ul class="menu">
-                        <li><a href="#">HTML и CSS</a></li>
-                        <li><a href="#" aria-current="page">Frontend</a></li>
-                        <li><a href="#">Backend</a></li>
-                    </ul>
-                </nav>
+            <nav class="nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="#">HTML и CSS</a></li>
+                    <li><a class="nav__link nav__link--current" href="#" aria-current="page">Frontend</a></li>
+                    <li><a class="nav__link" href="#">Backend</a></li>
+                </ul>
+            </nav>
 
-                <form action="#" method="get" role="search" aria-label="Поиск по блогу">
-                    <label class="visually-hidden" for="site-search">Поиск по блогу</label>
-                    <input
-                        id="site-search"
-                        type="search"
-                        name="search"
-                        placeholder="Поиск"
-                    />
-                </form>
-            </header>
+            <form class="search" action="#" method="get" role="search" aria-label="Поиск по блогу">
+                <label class="visually-hidden" for="site-search">Поиск по блогу</label>
+                <input
+                    class="search__input"
+                    id="site-search"
+                    type="search"
+                    name="search"
+                    placeholder="Поиск"
+                />
+            </form>
+        </header>
 
-            <main>
-                <article class="content" aria-labelledby="post-title">
-                    <header>
-                        <ul class="post-info">
-                            <li><a href="#" rel="tag">Frontend</a></li>
-                            <li><time datetime="2024-05-12">12 мая 2024</time></li>
-                        </ul>
+        <main class="main">
+            <article class="article" aria-labelledby="post-title">
+                <header class="article__header">
+                    <p class="article__meta">
+                        <a class="article__category" href="#" rel="tag">Frontend</a>
+                        <span class="article__separator" aria-hidden="true">•</span>
+                        <time datetime="2024-05-12">12 мая 2024</time>
+                    </p>
 
-                        <h1 id="post-title">Теория цвета - Как цвет влияет на поведение потребителей</h1>
+                    <h1 class="article__title" id="post-title">
+                        Теория цвета - Как цвет влияет на поведение потребителей
+                    </h1>
 
-                        <div class="author" aria-label="Автор статьи">
-                            <img src="img/author-natalya-vasileva.jpg" alt="" />
-                            <div>
-                                <p><a href="#" rel="author">Наталья Васильева</a></p>
-                                <p>Разработчик</p>
-                            </div>
+                    <div class="author" aria-label="Автор статьи">
+                        <div class="author__avatar" aria-hidden="true">НВ</div>
+                        <div class="author__info">
+                            <a class="author__name" href="#" rel="author">Наталья Васильева</a>
+                            <p class="author__role">Разработчик</p>
                         </div>
-                    </header>
+                    </div>
+                </header>
 
-                    <figure class="post-image">
-                        <img
-                            src="img/color-theory-cover.jpg"
-                            alt="Монитор с ярким абстрактным изображением"
-                        />
-                    </figure>
+                <figure class="cover" aria-label="Иллюстрация к статье">
+                    <div class="cover__frame">
+                        <div class="cover__screen"></div>
+                    </div>
+                    <div class="cover__stand"></div>
+                    <div class="cover__base cover__base--left"></div>
+                    <div class="cover__base cover__base--right"></div>
+                </figure>
 
-                    <section class="post-text" aria-label="Текст статьи">
-                        <p>
-                            Теория цвета — это особенности эмоционального восприятия
-                            человеком тех или иных цветовых решений. Цвета и
-                            различные их комбинации влияют на психику человека, а
-                            значит, во многом определяют его поведение. Маркетологи
-                            и веб-дизайнеры хорошо знают, что правильно подобранная
-                            цветовая гамма сайта помогает привлечь и удержать
-                            внимание пользователей, сформировать положительное
-                            отношение к продукту, подтолкнуть посетителей к
-                            совершению целевых действий, повысить конверсию.
-                        </p>
+                <section class="article__content" aria-label="Текст статьи">
+                    <p>
+                        Теория цвета — это особенности эмоционального восприятия человеком
+                        тех или иных цветовых решений. Цвета и различные их комбинации
+                        влияют на психику человека, а значит, во многом определяют его
+                        поведение. Маркетологи и веб-дизайнеры хорошо знают, что правильно
+                        подобранная цветовая гамма сайта помогает привлечь и удержать
+                        внимание пользователей, сформировать положительное отношение к
+                        продукту, подтолкнуть посетителей к совершению целевых действий,
+                        повысить конверсию.
+                    </p>
 
-                        <p>
-                            Универсального ответа на вопрос, как тот или иной цвет
-                            влияет на разных людей, нет. Эмоциональная и
-                            поведенческая реакция каждого человека зависит от
-                            личного опыта. Вместе с тем можно выделить определенные
-                            закономерности влияния цветов на поведение
-                            пользователей.
-                        </p>
+                    <p>
+                        Универсального ответа на вопрос, как тот или иной цвет влияет на
+                        разных людей, нет. Эмоциональная и поведенческая реакция каждого
+                        человека зависит от личного опыта. Вместе с тем можно выделить
+                        определенные закономерности влияния цветов на поведение
+                        пользователей.
+                    </p>
 
-                        <p>
-                            В исследовании «Влияние цвета на маркетинг»
-                            (<cite><a href="#">Impact of color on marketing</a></cite>)
-                            говорится, что использование разных цветов может
-                            существенно влиять на настроение и поведение
-                            потребителей. Утверждается, что от 60 до 90% покупателей
-                            (в зависимости от категории продукта) дают положительную
-                            или отрицательную оценку товару, основываясь только на
-                            его цвете.
-                        </p>
-                    </section>
-                </article>
-            </main>
+                    <p>
+                        В исследовании «Влияние цвета на маркетинг» говорится, что
+                        использование разных цветов может существенно влиять на настроение и
+                        поведение потребителей. Утверждается, что от 60 до 90% покупателей
+                        дают положительную или отрицательную оценку товару, основываясь
+                        только на его цвете.
+                    </p>
+                </section>
+            </article>
+        </main>
 
-            <footer class="copyright">
-                <p><small>Все права защищены (с) 2024</small></p>
-            </footer>
-        </div>
-    </body>
+        <footer class="footer">
+            <p class="footer__text">Все права защищены (с) 2024</p>
+        </footer>
+    </div>
+</body>
 </html>
